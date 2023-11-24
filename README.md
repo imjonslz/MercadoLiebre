@@ -1,3 +1,3 @@
 # MercadoLiebre
-This is a school project
+This is a school project  
 Learning HTML and CSS
