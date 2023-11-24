@@ -1,0 +1,306 @@
+/*------------------------GLOBALS------------------------*/
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.75rem;
+}
+
+.container {
+    max-width: 90%;
+    margin: auto;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.containerFlex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.marginSeparador {
+    margin-bottom: 32px;
+}
+
+.spaceB{
+    justify-content: space-between;
+}
+
+/*------------------------HEADER------------------------*/
+
+header {
+    background-color: #EAC926;
+}
+
+.logoBox {
+    max-width: 20%;
+}
+
+.logoBox img{
+    width: 100%;
+}
+
+.formBusqueda{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.formBusqueda .inputBusqueda{
+    width: 80%;
+    height: 46px;
+    border-radius: 4px 0px 0px 4px;
+    padding: 16px;
+    border: none;
+    font-size: 16px;
+}
+
+.buttonBusqueda{
+    background-color: #ffffff;
+    height: 46px;
+    border: none;
+    border-radius: 0px 4px 4px 0px;
+}
+
+.fa-magnifying-glass{
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.publi{
+    display: flex;
+    align-items: center;
+    color: #03264C;
+    font-size: 16px;
+}
+ 
+.fa-hand-holding-dollar {
+    padding: 0.5rem;
+    font-size: 16px;
+}
+
+li{
+    padding: 16px;
+}
+
+.burger-menu {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li i {
+    padding-left: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+}
+
+.fa-bars {
+    background-color: #1259c3;
+    font-size: 1.5rem;
+    color: #ffffff;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+/*------------------------MAIN------------------------*/
+
+main {
+    background-color: #ebebeb;
+}
+
+main section {
+    margin-bottom: 80px;
+}
+
+.banner img {
+    max-width: 100%;
+}
+
+.card {
+    max-width: 310px;
+    background-color: #ffffff;
+    margin: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.card img {
+    width: 100%;
+    padding: 1rem;
+}
+
+.content {
+    border-top: 1px #ebebeb solid;
+    padding: 1rem;
+    position: relative;
+}
+
+.truck {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #39b54a;
+    background-color: #ffffff;
+}
+
+.truck.containerFlex{
+    align-items: center;
+    position: absolute;
+    z-index: inherit;
+    top: -24px;
+    left: 230px;
+}
+
+.fa-truck {
+    color: #39b54a;
+    font-size: 1.2rem;
+}
+
+.titular {
+    font-size: 1.5rem;
+}
+
+.precio {
+    font-size: 1.12rem;
+    margin: 0.5rem 0px;
+}
+
+.descuento {
+    font-size: 1rem;
+    color: #39b54a;
+    margin: 0.5rem 0px;
+}
+
+.descripcion {
+    font-size: 1rem;
+    margin: 1.5rem 0 0 0;
+}
+
+/*------------------------FOOTER------------------------*/
+footer {
+    text-align: center;
+}
+
+footer i{
+    color: #1259c3;
+    font-size: 2rem;
+    transition: color 450ms;
+} 
+
+footer i:hover{
+    color: #03264C;
+} 
+
+footer strong{
+    font-size: 1rem;
+}
+
+footer section {
+    margin-bottom: 3rem;
+}
+
+/*------------------------MEDIA QUERIES------------------------*/
+@media (min-width: 361px){
+    nav.containerFlex {
+        display: none;
+    }
+    .card{
+        max-width: 325px;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 1.5rem;
+        border-radius: 0.5rem;
+    }
+    .marginSeparador{
+        margin: 16px;
+    }
+    .logoBox{
+        max-width: 100%;
+    }
+    .formBusqueda{
+        max-width: 100%;
+        width: 100%;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+    footer p{
+        max-width: 350px;
+        width: 100%;
+    }
+    .publi{
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 769px){
+    nav.containerFlex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    li{
+        padding: 8px;
+    }
+    .burger-menu {
+        display: none;
+    }
+    .publi{
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1024px){
+    .formBusqueda{
+        max-width: 40%;
+        width: 40%;
+    }
+    nav.containerFlex {
+        justify-content: space-between;
+    }
+    .container{
+        width: 1600px;
+    }
+    .card {
+        box-shadow: none;
+        transition: box-shadow 450ms;   
+    }
+    .card:hover {
+        box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.1);
+    }
+    .card:hover .fa-truck{
+        animation-name: truckAnimation;
+        animation-duration: 1000ms;
+        animation-iteration-count: 1;
+    }
+    .card .descripcion {
+        opacity: 0%;
+        transition: opacity 450ms;
+    }
+    .card:hover .descripcion{
+        opacity: 100%;
+    }
+}
+
+@keyframes truckAnimation {
+    0% {
+        transform: rotate(0deg);
+    }50%{
+        transform: rotate(-45deg);
+    }100%{
+        transform: rotate(0deg);
+    }
+}
